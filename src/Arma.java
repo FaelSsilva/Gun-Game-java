@@ -37,5 +37,13 @@ public class Arma {
         this.municaoDisp = municaoDisp;
     }
 
+    public void atirar(){
+        if(this.municaoDisp > 0){
+            municaoDisp--;
+            System.out.println("Arma Disparada");
+        } else{
+            System.out.println("Arma sem munição");
+        }
+    }
 
 }

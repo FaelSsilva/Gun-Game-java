@@ -40,20 +40,25 @@ public class Player {
     }
 
     public void receberDano(int dano){
-        this.vida = (this.vida - dano);
-
         if (this.vida <= 0) {
-            this.vida = 0;
-            
-            System.out.println("Você morreu");
-        }
-
-        System.out.println("vida atual: " + this.vida);
-    }
+        System.out.println("Jogador já está morto!");
+            }else if (this.vida <= dano) {
+                this.vida = 0;
+                System.out.println("Jogador morreu!");
+                }else {
+                    this.vida = this.vida - dano;
+                    System.out.println("Jogador recebeu " + dano + " de dano");
+                    System.out.println("Vida atual: " + this.vida);
+            }
+}
 
     public void aumentarEliminacao(){
         qtd_eliminacoes++;
     }
 
-    
+    // public void PlayerMorrer(){
+    //     if(this.vida <= 0){
+            
+    //     }
+    // }
 }
